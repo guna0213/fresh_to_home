@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EMPLOYEE PASS</title>
+</head>
+<body>
+    <table border="0" width="100%" height="100%">
+        <tr>
+            <td align="center" valign="middle">
+                <h1><b><u>EMPLOYEE PASS</u></b></h1>
+                
+                <form action="employee_pass.php" method="post">
+                    <table border="0">
+                        <tr>
+                            <td><label for="name">Employee Name:</label></td>
+                            <td><input type="text" name="name" id="name" placeholder="Enter your full name" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="id">ID:</label></td>
+                            <td><input type="text" name="id" id="id" placeholder="EMP1234"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><small>Format: EMP followed by 4 digits (e.g., EMP1234)</small></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Email:</label></td>
+                            <td><input type="email" name="email" id="email" placeholder="name@company.com"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="phone">Phone:</label></td>
+                            <td><input type="tel" name="phone" id="phone" placeholder="Enter your contact number"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="date">Date:</label></td>
+                            <td><input type="date" name="date" id="date"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="time">Time:</label></td>
+                            <td><input type="time" name="time" id="time"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center"><input type="submit" value="Submit"></td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contractor Pass</title>
+</head>
+<body>
+    <h1 style="text-align: center; text-decoration: underline;">Contractor</h1>
+
+   
+
+    <form action="contractor.php" method="post" style="max-width: 500px; margin: auto;">
+        <table style="width: 100%; border-spacing: 10px;">
+            <tr>
+                <td><label for="name">Contractor Name:</label></td>
+                <td><input type="text" name="name" id="name" placeholder="Enter contractor name" required></td>
+            </tr>
+            <tr>
+                <td><label for="id">Contractor ID:</label></td>
+                <td><input type="text" name="id" id="id" placeholder="Enter contractor ID" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" name="email" id="email" placeholder="Enter email address" required></td>
+            </tr>
+            <tr>
+                <td><label for="phone">Phone:</label></td>
+                <td><input type="tel" name="phone" id="phone" placeholder="Enter phone number" required></td>
+            </tr>
+            <tr>
+                <td><label for="date">Date:</label></td>
+                <td><input type="date" name="date" id="date" required></td>
+            </tr>
+            <tr>
+                <td><label for="time">Time:</label></td>
+                <td><input type="text" name="time" id="time" placeholder="Enter time" required></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <input type="submit" name="submit" value="Submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

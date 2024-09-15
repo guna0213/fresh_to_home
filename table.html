@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table data</title>
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 80%;
+            margin: auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        th {
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function sortTable(n, colType) {
+            const table = document.querySelector("table tbody");
+            const rows = Array.from(table.rows);
+            const compare = (a, b) => {
+                const cellA = a.cells[n].innerText;
+                const cellB = b.cells[n].innerText;
+
+                if (colType === "text") {
+                    return cellA.localeCompare(cellB);
+                } 
+                else if (colType === "text") {
+                    return cellA.localeCompare(cellB);
+                }
+                else if (colType === "time") {
+                    return new Date("1970/01/01 " + cellA) - new Date("1970/01/01 " + cellB);
+                }
+                return 0;
+            };
+            rows.sort(compare);
+            table.append(...rows);
+        }
+    </script>
+</head>
+<body>
+    <h1 align="center">Table structure View</h1>
+    <table align="center">
+        <thead>
+            <tr>
+                <th onclick="sortTable(0, 'text')">Employee Name</th>
+                <th onclick="sortTable(0,'text')">Visitor Name</th>
+                <th onclick="sortTable(2, 'time')">Time</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Guna</td>
+                <td>Rana</td>
+                <td>10:30 AM</td>
+                <td>13/12/2021</td>
+            </tr>
+            <tr>
+                <td>Vicky</td>
+                <td>sujith</td>
+                <td>11:00 AM</td>
+                <td>13/12/2021</td>
+            </tr>
+            <tr>
+                <td>Raj</td>
+                <td>Ravi</td>
+                <td>11:30 AM</td>
+                <td>13/12/2021</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
